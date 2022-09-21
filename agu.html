@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>Online Course</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  
+</head>
+<style>
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+} 
+nav{
+  display: flex;
+  height: 80px;
+  width: 100%;
+  background: white;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px 0 100px;
+  flex-wrap: wrap;
+}
+nav .logo{
+  color: rgb(15, 2, 2);
+  font-size: 35px;
+  font-weight: 600;
+  margin-left: -40px;
+}
+nav ul{
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+nav ul li{
+  margin: 0 25px;
+ 
+}
+nav ul li a{
+  color: #0c0b0b;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+nav ul li a.active,
+nav ul li a:hover{
+  color: #111;
+  background: rgb(255, 255, 255);
+}
+nav .menu-btn i{
+  color: rgb(207, 19, 19);
+  font-size: 22px;
+  cursor: pointer;
+  display: none;
+}
+input[type="checkbox"]{
+  display: none;
+}
+.eg{
+  display: flex;
+  width: 300px;
+  height: 250px;
+}
+
+.card {
+  width: 300px;
+  padding: 13rem;
+  margin: 1rem;
+  background: #fff;
+  box-shadow:
+      0 12.5px 10px rgba(0, 0, 0, 0.035),
+      0 100px 80px rgba(0, 0, 0, 0.07)
+  ;
+  border-radius: 4px;
+  text-align: center;
+}
+.flex-container {
+  margin: 20px auto 0 auto;
+  margin-top: 0;
+  display: flex;
+  justify-content: center;
+  background-color:white;
+  
+}
+
+.box {
+  margin: 20px auto 0 auto;
+  color: white;
+  background-color:white;
+  width: 350px;
+  margin: 20px;
+   height: 340px;
+  font-size: 20px;
+}
+
+.text{
+  text-align:center;
+}
+.dhee-container{
+  margin: 20px auto 0 auto;
+  margin-top: 0;
+  display: flex;
+  justify-content: center;
+  background-color:rgb(88, 24, 238);
+  
+}
+
+.asi{
+  margin: 20px auto 0 auto;
+  color: white;
+  background-color:rgb(255, 255, 255);
+  width: 350px;
+  margin: 20px;
+   height: 340px;
+  font-size: 20px;
+}
+
+.text{
+  text-align:center;
+}
+.about-me {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 80px;
+  border-top: 2px solid #eeeeee;
+}
+
+.about-me img {
+  width: 500px;
+  max-width: 100%;
+  height: 500px;
+  border-radius: 10px;
+}
+
+.about-me-text h1{
+  font-size: 60px;
+  color: #333333;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  margin-top: 20px;
+  margin: 0;
+}
+
+.about-me-text p {
+  font-size: 20px;
+  
+  color: #585858;
+  margin: 10px 0;
+}
+.flex-container {
+  /* We first create a flex layout context */
+  display: flex;
+  
+  /* Then we define the flow direction 
+     and if we allow the items to wrap 
+   * Remember this is the same as:
+   * flex-direction: row;
+   * flex-wrap: wrap;
+   */
+  flex-flow: row wrap;
+  
+  /* Then we define how is distributed the remaining space */
+  justify-content: space-around;
+  
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.flex-item {
+  background: rgb(225, 229, 230);
+  border-radius: 10px;
+  width: 320px;
+  height: 150px;
+  margin-top: 10px;
+  line-height: 150px;
+  color: rgb(10, 8, 8);
+  font-size: 22px;
+  text-align: center;
+}
+body{
+  margin: 0;
+  font-family: 'raleway', sans-serif;
+  background: #ffffff;
+}
+
+a{
+  outline: none;
+  text-decoration: none;
+  transition: 0.3s;
+}
+h2{
+  margin: 0;
+  padding: 0;
+  font-family: 'Nunito', sans-serif;
+}
+p{
+  margin: 0;
+  padding: 0;
+}
+.pricing-table-title{
+  position: relative;
+  width: 100%;
+  text-align: center;
+  margin: 60px 0 15px 0;
+}
+.pricing-table-title:first-child{
+  margin-top: 30px;
+}
+.pricing-table-title h2{
+  font-size: 35px;
+  font-weight: 900;
+  color: #292b2e;
+  letter-spacing: 2px;
+}
+
+/* pricing table Style */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+.pricing-table{
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.pricing-table .ptable-item{
+  width: 33.33%;
+  padding: 15px;
+}
+.pricing-table .ptable-single{
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+.pricing-table .ptable-header,
+.pricing-table .ptable-body,
+.pricing-table .ptable-footer {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  background:#ffffff ;
+  overflow: hidden;
+}
+.pricing-table .ptable-title,
+.pricing-table .ptable-price,
+.pricing-table .ptable-description,
+.pricing-table .ptable-action{
+  position: relative;
+  width: 100%;
+  text-align: center;
+}
+
+/* Pricing table */
+
+
+.pricing-table.table .ptable-header{
+  padding: 30px 0 50px 0;
+}
+
+.pricing-table.table .ptable-icon{
+  margin-bottom: 15px;
+}
+.pricing-table.table .ptable-icon i{
+  display: inline-block;
+  color: #0a0202;
+  font-size: 45px;
+}
+.pricing-table.table .ptable-title h2{
+  color: #0c0101;
+  font-size: 24px;
+  font-weight: 300;
+  margin-left: 2px;
+}
+.pricing-table.table .ptable-price h2{
+  color: #050101;
+  font-size: 60px;
+  font-weight: 900;
+  margin-left: 15px;
+}
+.pricing-table.table .ptable-price h2 small{
+ position: absolute;
+  font-size: 18px;
+  font-weight: 900;
+  margin-left: -15px;
+  margin-top: 16px;
+}
+.pricing-table.table .ptable-price h2 span{
+   font-size: 16px;
+   font-weight: 300;
+   margin-left: 3px;
+  
+}
+.pricing-table.table .ptable-body{
+   padding: 30px 0;
+   background:white;
+   border-radius: 30px 30px 0 0;
+   margin-top: 30px;
+}
+.pricing-table.table  .ptable-description ul{
+   margin: 0;
+   padding: 0;
+   list-style: none;
+}
+.pricing-table.table  .ptable-description ul li{
+   color: #5395ff;
+   font-size: 14px;
+   font-weight: 300;
+   letter-spacing: 1px;
+   padding: 7px;
+}
+.pricing-table.table  .ptable-description ul li:last-child{
+   border: none;
+}
+.pricing-table.table .ptable-footer{
+   padding-bottom: 30px;
+   background: #f7f7f7;
+}
+
+.pricing-table.table .ptable-action a{
+   display: inline-block ;
+   padding: 10px 20px;
+   color: #ffffff;
+   font-size: 14px;
+   font-weight: 500;
+   letter-spacing: 2px;
+   background: #5395ff;
+   border-radius: 50px;
+}
+.pricing-table.table .ptable-action a i{
+   margin-right: 5px;
+}
+.pricing-table.table .ptable-action a:hover{
+   background: #71ce73;
+}
+.pricing-table.table .ptable-item.featured-item .ptable-action a{
+   background: #71ce73;
+}
+.pricing-table.table .ptable-item.featured-item .ptable-action a:hover{
+  background: #5395ff;
+}
+@media (max-width: 1000px){
+  nav{
+    padding: 0 40px 0 50px;
+  }
+}
+@media (max-width: 920px) {
+  nav .menu-btn i{
+    display: block;
+  }
+  #click:checked ~ .menu-btn i:before{
+    content: "\f00d";
+  }
+  nav ul{
+    position: fixed;
+    top: 80px;
+    left: -100%;
+    background: #111;
+    
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    display: block;
+    transition: all 0.3s ease;
+  }
+  #click:checked ~ ul{
+    left: 0;
+  }
+  nav ul li{
+    width: 100%;
+    margin: 40px 0;
+  }
+  nav ul li a{
+    width: 100%;
+    margin-left: -100%;
+    display: block;
+    font-size: 20px;
+    
+  }
+  #click:checked ~ ul li a{
+    margin-left: 0px;
+  }
+  nav ul li a.active,
+  nav ul li a:hover{
+    background: none;
+    color: rgb(240, 154, 25);
+  }
+} 
+</style>
+<body>
+  <nav>
+           <div class="logo">
+               Courzees
+           </div>
+          
+           
+           <ul>
+              <li><a class="active" href="#">Home</a></li>
+              <li><a href="#">Teachers</a></li>
+              <li><a href="#">Classes</a></li>
+              <li><a href="#">Contact us </a></li>
+            </ul>
+
+    <button type="submit" style="color:rgb(12, 6, 6); font-size: 18px;background-color: white; font-weight: 500;width:100px;height: 44px;border-radius: 12px; border-color:blue; letter-spacing: 0.5px;transition: all 0.3s ease;">Log-in
+    <button type="submit" style="color:rgb(252, 249, 249); font-size: 18px;background-color: rgb(67, 21, 233); font-weight: 500;width:100px;height: 44px;border-radius: 12px; border-color:blue; letter-spacing: 1px;transition: all 0.3s ease;">Sign-in</button>
+            
+           
+  </nav>
+  </body>
+  <body>
+    <div class="about-me">
+      <div class="about-me-text">
+        <h1>IMPROVE YOUR<br>GRADES WITH ONLINE<br> COURSE </h2>
+         <p>Want to improve  your School Grades? You need to study harder with the help of great teacher to improve your performance at school.</p><br>
+         <button type="submit" style="color:rgb(252, 249, 249); font-size: 18px;background-color: rgb(67, 21, 233); font-weight: 500;width:150px;height: 44px;border-radius: 12px; border-color:blue; letter-spacing: 2px;transition: all 0.3s ease;">Get Start</button> 
+         <button type="submit" style="color:rgb(90, 88, 88); font-size: 18px;background-color: rgb(245, 220, 167); font-weight: 500;width:150px;height: 44px;border-radius: 12px; border-color:rgb(253, 253, 248); letter-spacing: 1px;transition: all 0.3s ease;"><i style="font-size:24px;color:orange;" class="fa">&#xf144;</i>Play Video</button><br><br>
+         <i style="padding:10px;font-size:20px ;color:blue;" class="fa">&#xf046;</i>Certifiate Teachers     <i style="padding:10px;font-size:24px ;color:blue;" class="fa">&#xf046;</i>   High Quality video<i style="padding:10px;font-size:24px ;color:blue;" class="fa">&#xf046;</i>Affordable Price
+            
+        </div>
+      <img src="adure.jpg" alt="me" >
+    </div>
+    <br>
+      <center><h3 style=" font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">  We are collabrate with<span style="color:blue"> 250+ Leading Universities and Companies</h3></span></center> 
+       <br>
+       <img src="bqlly.jpg" style="margin:30px;" width="150px" height="80px"><span><img src="tek.jpg" style="margin:30px;" width="150px" height="80px"></span><span><img src="atli.jpg" style="margin: 30px;" width="150px" height="80px"></span><span><img src="asuna.jpg" style="margin: 30px;" width="150px" height="80px"></span><span><img src="vid.jpg" style="margin: 30px;" width="150px" height="80px"></span><span><img src="bal.jpg" style="margin: 30px;" width="150px" height="80px"></span>
+      <br>
+      <br>
+       <center> <h1 style=" font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif"> Why Must Courzees?</h2> </center>
+      <br>
+      <center><p style=" color: #585858;font-size: 20px;">We have been doing this for more than 10 years because we want to <br>provide always learning serivce that are no taught in school</center></p>
+      <br>
+      <div class="flex-container">
+        <div class="container">
+          <div class="box"><br><u style="color:blue"><h1 style="color:black; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-size: 29px;">Flexible products</h1></u><br>
+            <p style="color: #585858;; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-size: 23px;">learning can be adjusted by the according to your time because we also really appricatied you are doing other activites</p>
+            <br>
+            <p style="color:blue">learn more------></p>
+          </div>
+       
+        </div>
+        <div class="container">
+          <div class="box"><br><u style="color:rgb(233, 135, 7)"><h1 style="color:black; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-size: 29px;">Certified Teachers</h1></u><br>
+            <p style="color: #585858;; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;font-size: 23px;">We have been doing this for more than 10 years because we want to <br>provide always learning serivce that are no taught in school</center></p>
+            <br>
+           <p style="color:blue">learn more------></p>
+           </div>
+         
+        </div>
+         <div class="container">
+          <div class="box"><br><u style="color:rgb(26, 224, 36)"><h1 style="color:black; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-size: 29px;">Affordable price</h1></u><br>
+            <p style="color: #585858;; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-size: 23px;">In addition ,we also provided affordable so that you can easliy study online ,unterstand the lesson  and get maximum mark</p>
+            <br>
+            <p style="color:blue">learn more------></p>
+          </div>
+        </div>
+        
+        
+      </div>
+      <h1>Our Top Course</h1>
+      <div class="dhee-container">
+        
+        <div class="container">
+          
+          <div class="asi"><img src="ala.jpg"><br><br>
+            <h3 style="color:rgb(1, 1, 15)">Easy way to <br> learn algorithum.</h3>
+          <br>
+           <p style=" color: #585858;font-size: 13px;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">Doosan University</p>
+           <br>
+           <h4 style=" color: #585858;font-size: 33px;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">Course </h4>
+          </div>
+
+
+        
+        </div>
+        <div class="container">
+          <div class="asi">
+            <div class="asi"><img src="ala.jpg"><br><br>
+              <h3 style="color:rgb(1, 1, 15)">How to branding Your  <br> Product.</h3>
+            <br>
+             <p style=" color: #585858;font-size: 13px;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">Pennsyclin University</p>
+             <br>
+             <h4 style=" color: #585858;font-size: 33px;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">Course </h4>
+            </div>
+  
+          </div>
+       
+        </div>
+         <div class="container">
+         <div class="asi">
+          <div class="asi"><img src="ala.jpg"><br><br>
+            <h3 style="color:rgb(1, 1, 15)">Learn about physcis <br> and Universe </h3>
+          <br>
+           <p style=" color: #585858;font-size: 13px;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">Muichian University</p>
+           <br>
+           <h4 style=" color: #585858;font-size: 33px;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">Course </h4>
+          </div>
+
+         </div> 
+           
+        </div>
+        </div></div>
+        <br>
+        <br>
+        <h2 style=" font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif"><center>Explore Course By the Category</center></h2>
+        <br>
+        <center><p  style=" color: #585858;font-size: 20px;"> Get the most exciting course from all around the world and grow your career fast with others </p></center><br>
+        <ul class="flex-container">
+          <li class="flex-item">Mathematics And Algorithum</li>
+          <li class="flex-item" style="background: rgb(119, 100, 231);">Science and Biology</li>
+          <li class="flex-item">Finance and Marketing</li>
+          <li class="flex-item">Forgin language learning</li>
+          <li class="flex-item">Information Technology</li>
+          <li class="flex-item">Business and couslting</li>
+          <li class="flex-item">Arts,humanties and culture</li>
+          <li class="flex-item">Project Mangement</li>
+          
+        </ul>
+        <div class="pricing-table-title">
+          <center><h2>Our pricing</h2></center>
+      </div>
+      
+      <center><label class="switch">
+        <input type="checkbox" checked>
+       <span class="slider round"></span> </center>
+      
+      
+      <div class="pricing-table table">
+      
+          <div class="ptable-item">
+              <div class="ptable-single">
+      
+                  <div class="ptable-header">
+                      <div class="ptable-icon">
+                         
+                      </div>
+                      <div class="ptable-title">
+                          <h2>Perimimum</h2>
+                      </div>
+                      <BR>
+                      <p style=" color: #585858;font-size: 20px;">The national average cost of buying coin easy</p>
+                      <div class="ptable-price">
+                          <h2><small>$</small>22 <span>/ M</span></h2>
+                      </div>
+                      <BR>
+                     
+                        <div class="ptable-action">
+                            <a href="#"><i class="fa fa-shopping-cart"></i>Select plan</a>
+                       
+                    </div>
+                  </div>
+      
+                  <div class="ptable-body">
+                      <div class="ptable-description">
+                          <ul>
+                              <li>Pure HTML & CSS</li>
+                              <li>Google Font</li>
+                              <li>Fontawesome Icons</li>
+                              <li>Responsive Design</li>
+                              <li>Well-commented Code</li>
+                              <li>Easy to use</li>
+                          </ul>
+                      </div>
+                    </div>
+              </div>
+          </div>
+      
+         
+      
+          <div class="ptable-item">
+              <div class="ptable-single">
+      
+                  <div class="ptable-header">
+                      <div class="ptable-icon">
+                          
+                      </div>
+                      <div class="ptable-title">
+                          <h2>Stardard</h2>
+                      </div>
+                      <BR>
+                      <p style=" color: #585858;font-size: 20px;">The national average cost of buying coin easy</p>
+                      <div class="ptable-price">
+                          <h2><small>$</small>12 <span>/ M</span></h2>
+                      </div>
+                      <BR>
+                        <div class="ptable-action">
+                            <a href="#"><i class="fa fa-shopping-cart"></i>Select plan</a>
+                        </div>
+                    
+                  </div>
+      
+                  <div class="ptable-body">
+                      <div class="ptable-description">
+                          <ul>
+                              <li>Pure HTML & CSS</li>
+                              <li>Google Font</li>
+                              <li>Fontawesome Icons</li>
+                              <li>Responsive Design</li>
+                              <li>Well-commented Code</li>
+                              <li>Easy to use</li>
+                          </ul>
+                      </div>
+                  </div>
+      
+                  
+              </div>
+          </div>
+      
+      <div class="ptable-item featured-item">
+        <div class="ptable-single">
+      
+            <div class="ptable-header">
+                <div class="ptable-icon">
+                  
+                </div>
+                <div class="ptable-title">
+                    <h2>Extented</h2>
+                </div>
+                <BR>
+                <p style=" color: #585858;font-size: 20px;">The national average cost of buying coin easy</p>
+                <div class="ptable-price">
+                    <h2><small>$</small>19 <span>/ M</span></h2>
+                </div>
+      
+                <BR>
+      
+                  <div class="ptable-action">
+                      <a href="#"><i class="fa fa-shopping-cart"></i>Select plan</a>
+                  </div>
+             
+            </div>
+      
+            <div class="ptable-body">
+                <div class="ptable-description">
+                    <ul>
+                        <li>Pure HTML & CSS</li>
+                        <li>Google Font</li>
+                        <li>Fontawesome Icons</li>
+                        <li>Responsive Design</li>
+                        <li>Well-commented Code</li>
+                        <li>Easy to use</li>
+                    </ul>
+                </div>
+            </div>
+      
+            
+           
+        </div>
+      </div>
+     
